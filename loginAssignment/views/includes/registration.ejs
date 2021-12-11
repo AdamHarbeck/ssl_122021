@@ -1,0 +1,42 @@
+<button onclick="if (document.getElementById('registration').style.display == 'none'){
+    document.getElementById('registration').style.display = 'block'
+}else {document.getElementById('registration').style.display = 'none'}">Register</button>
+<div id="registration" style="z-index: 12; display: none; position: absolute; top: 4rem; width: 17rem; right: 3.5rem;
+background-color: #333a40; padding: 1rem; color: gray;">
+    <form action = "register" method="POST" >
+        <input type="text" name="firstname" placeholder="First name"/>
+        <input type="text" name="lastname" placeholder="Last name"/>
+        <input type="text" name="city" placeholder="City"/>
+        <input type="text" name="state" placeholder="State"/>
+        <input type="text" name="zip" placeholder="Zip"/>
+        <div>
+            <select name="age">
+                <option selected>0</option>
+                <option>13-18</option>
+                <option>19-29</option>
+                <option>30-39</option>
+                <option>40-49</option>
+                <option>50-59</option>
+                <option>60-69</option>
+                <option>70-79</option>
+                <option>80+</option>
+            </select>
+            <label for="age">Age</label>
+        </div>
+        <input type="radio" name="gender" value="male"/>
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" value="female"/>
+        <label for="gender">Female</label>
+        <input type="radio" name="gender" value="non-binary"/>
+        <label for="gender">Non-binary</label>
+        <div>
+            <input type="checkbox" name="consent"/>
+            <label for="consent">Consent to Terms</label>
+        </div>
+        <textarea placeholder="bio" name="bio"></textarea>
+
+        <div style="padding-top: .4rem">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
